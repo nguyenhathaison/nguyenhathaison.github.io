@@ -3,13 +3,40 @@
 }
 
 .date {
-  color: #6b7280;        /* soft gray, distinct but not loud */
-  font-size: 1em;     /* slightly smaller than main text */
+  font-size: 0.95em;
   margin-left: 0.5em;
-  white-space: nowrap;  /* keeps dates on one line */
+  white-space: nowrap;
+  color: #656565; /* default (light mode) */
+}
+
+/* Dark mode (LaTeX.css) */
+body.latex-dark .date {
+  color: #c9cdd6;
 }
 
 li em {
   display: block;          /* put em on its own line */
   margin-left: 1.5rem;     /* indentation */
 }
+
+.author span {
+  display: block;
+}
+
+.author .name {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: 0.3rem;
+}
+
+.quote-credit {
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 0.1rem;
+}
+

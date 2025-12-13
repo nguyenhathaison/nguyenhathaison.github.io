@@ -16,7 +16,7 @@ const world = engine.world;
 world.gravity.y = 0; 
 
 // Reduce air resistance for a smoother, bouncier float
-world.gravity.scale = 0.1; 
+world.gravity.scale = 0; 
 
 // 2. Create an invisible renderer (we will handle rendering with CSS)
 // We still need the renderer for the Runner to work, but we hide its canvas.
@@ -45,7 +45,7 @@ const height = window.innerHeight;
 const boundaries = [
     // Top, Bottom, Left, Right
     Bodies.rectangle(width / 2, -25, width, 50, boundaryOptions),
-    Bodies.rectangle(width / 2, height + 25, width, 50, boundaryOptions),
+    Bodies.rectangle(width / 2, height - 10, width, 50, boundaryOptions),
     Bodies.rectangle(-25, height / 2, 50, height, boundaryOptions),
     Bodies.rectangle(width + 25, height / 2, 50, height, boundaryOptions)
 ];
@@ -54,9 +54,11 @@ Composite.add(world, boundaries);
 
 // 4. Create physics bodies for the HTML elements
 const elements = [
-    { id: 'box-a', isCircle: false, options: { frictionAir: 0.005, restitution: 0.8, mass: 10 } },
-    { id: 'sphere-b', isCircle: true, options: { frictionAir: 0.002, restitution: 0.9, mass: 5 } },
-    { id: 'text-c', isCircle: false, options: { frictionAir: 0.01, restitution: 0.7, mass: 1 } }
+    { id: 'random1', isCircle: false, options: { frictionAir: 0.001, restitution: 0.9, mass: 100 } },
+    { id: 'random2', isCircle: true, options: { frictionAir: 0.001, restitution: 0.9, mass: 100 } },
+    { id: 'random3', isCircle: true, options: { frictionAir: 0.001, restitution: 0.9, mass: 100 } },
+    { id: 'random4', isCircle: true, options: { frictionAir: 0.001, restitution: 0.9, mass: 100 } },
+    { id: 'random5', isCircle: false, options: { frictionAir: 0.001, restitution: 0.9, mass: 100 } }
 ];
 
 elements.forEach(el => {

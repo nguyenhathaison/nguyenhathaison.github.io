@@ -5,6 +5,7 @@
     <title>Nguyen Ha Thai Son (WIP)</title>
     <link rel="stylesheet" href="https://latex.vercel.app/style.css" />
     <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/dark-mode-toggle.css" />
   </head>
@@ -31,9 +32,14 @@
       </svg>
     </button>
 
+    <nav class="top-nav">
+      <a href="./" class="nav-link">/home</a>
+      <a href="./things" class="nav-link">/things</a>
+    </nav>
+
     <p class="author">
-      <span class="name">Nguyen Ha Thai Son</span>
-      <span class="quote"> “idk what to put in here yet” </span>
+      <span class="name animate-text">Nguyen Ha Thai Son</span>
+      <span class="quote"> “ idk what to put in here yet<span class="blink" style="display:inline"></span>” </span>
       <span class="quote-credit">- hello</span>
     </p>
 
@@ -131,9 +137,6 @@
 
     <section class="socials">
       <h2>Find Me</h2>
-      <p>
-        I'm scattered across the internet. Here's where you can track me down:
-      </p>
 
       <div class="social-links">
         <a href="mailto:nguyenhathaison.prog@gmail.com" class="social-link">
@@ -173,7 +176,7 @@
         </a>
       </div>
     </section>
-
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

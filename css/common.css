@@ -1,3 +1,7 @@
+
+
+
+
 .author {
   font-size: xx-large;
 }
@@ -19,6 +23,10 @@ li em {
   margin-left: 1.5rem; /* indentation */
 }
 
+li strong {
+  color:var(--link-visited);
+}
+
 .author span {
   display: block;
 }
@@ -28,17 +36,7 @@ li em {
   font-weight: bold;
 }
 
-.quote {
-  font-style: italic;
-  font-size: 0.9em;
-  margin-top: 0.3rem;
-}
 
-.quote-credit {
-  font-size: 0.8em;
-  color: #777;
-  margin-top: 0.1rem;
-}
 
 /* Make links without underlines by default */ 
 .no-underline-link a {
@@ -69,13 +67,31 @@ li em {
     white-space: nowrap;
 }
 
-/* Honors & Awards */
-.awards-section li {
-    position: relative; /* This is required for absolute positioning to work */
-    overflow: visible; /* Allow content to overflow */
+.top-nav {
+  text-align: right;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+
 }
-.awards-section .date {
-    position: absolute;
-    right: -1rem; /* Adjust this value to push it further right */
-    white-space: nowrap;
+
+.nav-link {
+  display: inline-block;
+  margin: 0 0.1rem;
+  /* padding: 0.3rem 0.5rem; */
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+/* Responsive: center on mobile */
+@media (max-width: 768px) {
+  .top-nav {
+    text-align: center;
+    padding-right: 0;
+  }
 }

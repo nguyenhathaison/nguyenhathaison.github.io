@@ -1,0 +1,10 @@
+/* Honors & Awards */
+.awards-section li {
+    position: relative; /* This is required for absolute positioning to work */
+    overflow: visible; /* Allow content to overflow */
+}
+.awards-section .date {
+    position: absolute;
+    right: -1rem; /* Adjust this value to push it further right */
+    white-space: nowrap;
+}

@@ -1,5 +1,5 @@
 .author {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 .date {
@@ -15,8 +15,8 @@ body.latex-dark .date {
 }
 
 li em {
-  display: block;          /* put em on its own line */
-  margin-left: 1.5rem;     /* indentation */
+  display: block; /* put em on its own line */
+  margin-left: 1.5rem; /* indentation */
 }
 
 .author span {
@@ -38,5 +38,10 @@ li em {
   font-size: 0.8em;
   color: #777;
   margin-top: 0.1rem;
+}
+
+.no-underline-link {
+  text-decoration: none;
+
 }
 

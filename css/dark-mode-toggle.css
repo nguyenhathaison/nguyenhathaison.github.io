@@ -1,0 +1,100 @@
+/* Button positioning */
+#dark-mode-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+
+  background: none;
+  border: none;
+  padding: 0.4rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 2.2rem;
+  height: 2.2rem;
+  position: relative;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Base icon styling */
+#dark-mode-toggle .icon {
+  width: 1.4rem;
+  height: 1.4rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: opacity 0.25s ease, transform 0.35s ease;
+}
+
+/* Light mode icon color */
+#dark-mode-toggle {
+  color: #444;
+}
+
+/* Dark mode icon color */
+body.latex-dark #dark-mode-toggle {
+  color: #e0e3ea;
+}
+
+/* Sun visible by default */
+#dark-mode-toggle .sun {
+  opacity: 1;
+}
+
+/* Moon hidden by default */
+#dark-mode-toggle .moon {
+  opacity: 0;
+}
+
+/* Dark mode: swap icons */
+body.latex-dark #dark-mode-toggle .sun {
+  opacity: 0;
+}
+
+body.latex-dark #dark-mode-toggle .moon {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #dark-mode-toggle {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.3rem;
+  }
+
+  #dark-mode-toggle .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #dark-mode-toggle {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 0.25rem;
+  }
+
+  #dark-mode-toggle .icon {
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 1.8;
+  }
+}

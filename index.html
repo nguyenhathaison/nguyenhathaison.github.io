@@ -5,10 +5,27 @@
     <title>Nguyen Ha Thai Son (WIP)</title>
     <link rel="stylesheet" href="https://latex.vercel.app/style.css" />
     <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/dark-mode-toggle.css" />
   </head>
 
   <body>
-    <button id="dark-mode-toggle">Toggle dark mode</button>
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+      <svg class="icon sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5" />
+        <line x1="12" y1="1" x2="12" y2="4" />
+        <line x1="12" y1="20" x2="12" y2="23" />
+        <line x1="1" y1="12" x2="4" y2="12" />
+        <line x1="20" y1="12" x2="23" y2="12" />
+        <line x1="4.2" y1="4.2" x2="6.3" y2="6.3" />
+        <line x1="17.7" y1="17.7" x2="19.8" y2="19.8" />
+        <line x1="4.2" y1="19.8" x2="6.3" y2="17.7" />
+        <line x1="17.7" y1="6.3" x2="19.8" y2="4.2" />
+      </svg>
+
+      <svg class="icon moon" viewBox="0 0 24 24">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+      </svg>
+    </button>
 
     <p class="author">
       <span class="name">Nguyen Ha Thai Son</span>
@@ -24,7 +41,7 @@
     <section>
       <h2>About Me</h2>
       <p>
-        Hii, I'm Thai Son, aka Junchi. I'm a Year 4 student at Raffles Institution in Singapore, where I spend most of my time either trying to solve problems or creating new ones with code. My interests in math and programming naturally led me here. I've done <a href="./things">a few things</a> here and there. Feel free to reach me at nguyenhathaison.prog@gmail.com !
+        Hii, I'm Thai Son, aka Junchi. I'm a Year 4 student at Raffles Institution in Singapore, where I spend most of my time either trying to solve problems or creating new ones with code. My interests in math and programming naturally led me here. I've done <a href="./things" class="no-underline-link">a few things</a> here and there. Feel free to reach me at <a href="mailto:nguyenhathaison.prog@gmail.com" class="no-underline-link">nguyenhathaison.prog@gmail.com</a >
       </p>
     </section>
 

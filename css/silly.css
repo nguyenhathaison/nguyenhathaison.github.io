@@ -1,0 +1,48 @@
+/* Basic styling for the viewport */
+        body {
+            margin: 0;
+            overflow: hidden; /* Hide scrollbars as elements move */
+        }
+
+        /* Container for the physics world */
+        #physics-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Base styles for all physics objects */
+        .physics-element {
+            position: absolute; /* Essential for Matter.js to control position */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 1.2rem; */
+            cursor: grab; /* Visual cue that they can be moved */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Specific styles for demonstration elements */
+        #box-a {
+            width: 100px;
+            height: 100px;
+            /* background-color: #ff5733; */
+            border-radius: 10px;
+        }
+
+        #sphere-b {
+            width: 80px;
+            height: 80px;
+            /* background-color: #33ffb8; */
+            border-radius: 50%; /* Makes it look like a sphere/circle */
+        }
+
+        #text-c {
+            padding: 15px 30px;
+            /* background-color: #33aaff; */
+            border-radius: 5px;
+            white-space: nowrap;
+        }

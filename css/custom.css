@@ -1,0 +1,15 @@
+.author {
+    font-size: xx-large;
+}
+
+.date {
+  color: #6b7280;        /* soft gray, distinct but not loud */
+  font-size: 1em;     /* slightly smaller than main text */
+  margin-left: 0.5em;
+  white-space: nowrap;  /* keeps dates on one line */
+}
+
+li em {
+  display: block;          /* put em on its own line */
+  margin-left: 1.5rem;     /* indentation */
+}

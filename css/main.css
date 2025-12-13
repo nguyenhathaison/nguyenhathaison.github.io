@@ -1,0 +1,67 @@
+/* Writings */
+.writings li {
+  position: relative; /* This is required for absolute positioning to work */
+  overflow: visible; /* Allow content to overflow */
+}
+
+.writings .date {
+  position: absolute;
+  right: -1rem; /* Adjust this value to push it further right */
+  white-space: nowrap;
+}
+
+/* Projects */
+.projects li {
+  position: relative; /* This is required for absolute positioning to work */
+  overflow: visible; /* Allow content to overflow */
+}
+
+.projects .date {
+  position: absolute;
+  right: -1rem; /* Adjust this value to push it further right */
+  white-space: nowrap;
+}
+
+/* Socials */
+.social-links {
+    justify-content: center;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.25rem;
+  /* border: 2px solid currentColor;
+  border-radius: 8px; */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: inherit;
+  font-weight: 500;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  text-decoration: underline;
+}
+
+.social-link .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    justify-content: center;
+  }
+}

@@ -41,21 +41,11 @@ li em {
 }
 
 /* Make links without underlines by default */ 
-.no-underline-link {
+.no-underline-link a {
   text-decoration: none;
 }
 
-/* Writings */
-.writings li {
-  position: relative; /* This is required for absolute positioning to work */
-  overflow: visible; /* Allow content to overflow */
-}
 
-.writings .date {
-  position: absolute;
-  right: -1rem; /* Adjust this value to push it further right */
-  white-space: nowrap;
-}
 
 
 /* Optional: Add more space on mobile so dates don't overlap */

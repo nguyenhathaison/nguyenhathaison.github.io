@@ -46,23 +46,46 @@ li em {
 }
 
 /* Writings */
-.article {
+.writings li {
   position: relative; /* This is required for absolute positioning to work */
   overflow: visible; /* Allow content to overflow */
 }
 
-.article .date {
+.writings .date {
   position: absolute;
   right: -1rem; /* Adjust this value to push it further right */
   white-space: nowrap;
 }
 
+
 /* Optional: Add more space on mobile so dates don't overlap */
 @media (max-width: 768px) {
-  .article .date {
+    .article .date {
     position: static; /* Reset to normal flow on mobile */
     display: block;
     margin-left: 0;
     margin-top: 0.25rem;
   }
+}
+
+/* Work Experience */
+.work-experience li {
+    position: relative; /* This is required for absolute positioning to work */
+    overflow: visible; /* Allow content to overflow */
+}
+.work-experience .date {
+    position: absolute;
+    right: -1rem; /* Adjust this value to push it further right */
+    white-space: nowrap;
+}
+
+/* Honors & Awards */
+.awards-section li {
+    position: relative; /* This is required for absolute positioning to work */
+    overflow: visible; /* Allow content to overflow */
+}
+.awards-section .date {
+    position: absolute;
+    right: -1rem; /* Adjust this value to push it further right */
+    white-space: nowrap;
 }

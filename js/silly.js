@@ -35,8 +35,9 @@ render.canvas.style.display = 'none';
 
 // 3. Create the boundaries (walls) of the screen
 const boundaryOptions = {
-    isStatic: true, // Walls don't move
-    restitution: 1, // Full bounce
+    isStatic: true, 
+    restitution: 1, // Full bounce off the walls
+    friction: 0,    // No sliding friction
     render: { fillStyle: 'transparent' }
 };
 const width = window.innerWidth;
@@ -45,7 +46,7 @@ const height = window.innerHeight;
 const boundaries = [
     // Top, Bottom, Left, Right
     Bodies.rectangle(width / 2, -25, width, 50, boundaryOptions),
-    Bodies.rectangle(width / 2, height - 10, width, 50, boundaryOptions),
+    Bodies.rectangle(width / 2, height - 25, width, 50, boundaryOptions),
     Bodies.rectangle(-25, height / 2, 50, height, boundaryOptions),
     Bodies.rectangle(width + 25, height / 2, 50, height, boundaryOptions)
 ];
@@ -54,11 +55,14 @@ Composite.add(world, boundaries);
 
 // 4. Create physics bodies for the HTML elements
 const elements = [
-    { id: 'random1', isCircle: false, options: { frictionAir: 0.001, restitution: 0.9, mass: 100 } },
-    { id: 'random2', isCircle: true, options: { frictionAir: 0.001, restitution: 0.9, mass: 100 } },
-    { id: 'random3', isCircle: true, options: { frictionAir: 0.001, restitution: 0.9, mass: 100 } },
-    { id: 'random4', isCircle: true, options: { frictionAir: 0.001, restitution: 0.9, mass: 100 } },
-    { id: 'random5', isCircle: false, options: { frictionAir: 0.001, restitution: 0.9, mass: 100 } }
+    { id: 'random1', isCircle: false, options: { frictionAir: 0.001, restitution: 1, mass: 100 } },
+    { id: 'random2', isCircle: true, options: { frictionAir: 0.001, restitution: 1, mass: 100 } },
+    { id: 'random3', isCircle: true, options: { frictionAir: 0.001, restitution: 1, mass: 100 } },
+    { id: 'random4', isCircle: true, options: { frictionAir: 0.001, restitution: 1, mass: 100 } },
+    { id: 'random5', isCircle: false, options: { frictionAir: 0.001, restitution: 1, mass: 100 } },
+    { id: 'random6', isCircle: false, options: { frictionAir: 0.001, restitution: 1, mass: 100 } },
+    { id: 'random7', isCircle: false, options: { frictionAir: 0.001, restitution: 1, mass: 100 } },
+    { id: 'dark-mode-toggle', isCircle: false, options: { frictionAir: 0.001, restitution: 1, mass: 100 } }
 ];
 
 elements.forEach(el => {
@@ -82,8 +86,8 @@ elements.forEach(el => {
     
     // Apply an initial random velocity for "floating forever"
     Matter.Body.setVelocity(body, { 
-        x: (Math.random() - 0.5) * 5, 
-        y: (Math.random() - 0.5) * 5 
+        x: (Math.random() - 0.5) * 50, // Increased velocity
+        y: (Math.random() - 0.5) * 50 // Increased velocity
     });
 
     Composite.add(world, body);

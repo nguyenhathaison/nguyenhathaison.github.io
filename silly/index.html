@@ -1,23 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Floating Physics Simulation</title>
     <link rel="stylesheet" href="https://latex.vercel.app/style.css" />
-    <link rel="stylesheet" href="../css/silly.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="../css/silly.css" />
+    <link rel="stylesheet" href="../css/dark-mode-toggle.css" />
+  </head>
+  <body>
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+      <svg class="icon sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5" fill="currentColor" />
+        <line x1="12" y1="1" x2="12" y2="4" />
+        <line x1="12" y1="20" x2="12" y2="23" />
+        <line x1="1" y1="12" x2="4" y2="12" />
+        <line x1="20" y1="12" x2="23" y2="12" />
+        <line x1="4.2" y1="4.2" x2="6.3" y2="6.3" />
+        <line x1="17.7" y1="17.7" x2="19.8" y2="19.8" />
+        <line x1="4.2" y1="19.8" x2="6.3" y2="17.7" />
+        <line x1="17.7" y1="6.3" x2="19.8" y2="4.2" />
+      </svg>
+
+      <svg class="icon moon" viewBox="0 0 24 24">
+        <path
+          d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
 
     <div id="physics-container">
-        <p id="random1" class="physics-element">I like taylor swift</p>
-        <p id="random2" class="physics-element"><a href="../index.html">/home</a></p>
-        <p id="random3" class="physics-element"><a href="">/silly</a></p>
-        <p id="random4" class="physics-element"><a href="../things/index.html">/things</a></p>
-        <p id="random5" class="physics-element">Floating Text</p>
+      <p id="random1" class="physics-element">I like taylor swift</p>
+      <p id="random2" class="physics-element">
+        <a href="../index.html">/home</a>
+      </p>
+      <p id="random3" class="physics-element"><a href="">/silly</a></p>
+      <p id="random4" class="physics-element">
+        <a href="../things/index.html">/things</a>
+      </p>
+      <p id="random5" class="physics-element">Floating Text</p>
+      <iframe
+        id="random6"
+        data-testid="embed-iframe"
+        style="border-radius: 12px"
+        src="https://open.spotify.com/embed/track/4nyF5lmSziBAt7ESAUjpbx?utm_source=generator"
+        width="20%"
+        height="152"
+        frameborder="0"
+        allowfullscreen=""
+        allow="
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          fullscreen;
+          picture-in-picture;
+        "
+        loading="lazy"
+      ></iframe>
+      <iframe
+        id="random7"
+        data-testid="embed-iframe"
+        style="border-radius: 12px"
+        src="https://open.spotify.com/embed/track/4w2GLmK2wnioVnb5CPQeex?utm_source=generator"
+        width="20%"
+        height="252"
+        frameborder="0"
+        allowfullscreen=""
+        allow="
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          fullscreen;
+          picture-in-picture;
+        "
+        loading="lazy"
+      ></iframe>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
     <script src="../js/silly.js"></script>
-</body>
+    <script src="../js/main.js"></script>
+  </body>
 </html>

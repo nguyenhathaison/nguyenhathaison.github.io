@@ -19,8 +19,6 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-
 // Section reveal on scroll
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {

@@ -5,7 +5,7 @@
 }
 
 .quote-credit {
-    margin-left: 400px;
+  margin-left: 400px;
   font-size: 0.8em;
   color: #777;
 }
@@ -18,7 +18,7 @@
 
 .writings .date {
   position: absolute;
-  right: -1rem; /* Adjust this value to push it further right */
+  right: -1.5rem; /* Adjust this value to push it further right */
   white-space: nowrap;
 }
 
@@ -30,7 +30,7 @@
 
 .projects .date {
   position: absolute;
-  right: -1rem; /* Adjust this value to push it further right */
+  right: -1.5rem; /* Adjust this value to push it further right */
   white-space: nowrap;
 }
 

@@ -10,29 +10,7 @@
   color: #777;
 }
 
-/* Writings */
-.writings li {
-  position: relative; /* This is required for absolute positioning to work */
-  overflow: visible; /* Allow content to overflow */
-}
 
-.writings .date {
-  position: absolute;
-  right: -1.5rem; /* Adjust this value to push it further right */
-  white-space: nowrap;
-}
-
-/* Projects */
-.projects li {
-  position: relative; /* This is required for absolute positioning to work */
-  overflow: visible; /* Allow content to overflow */
-}
-
-.projects .date {
-  position: absolute;
-  right: -1.5rem; /* Adjust this value to push it further right */
-  white-space: nowrap;
-}
 
 /* Socials */
 .social-links {
